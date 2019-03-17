@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
     # return df['Close'].max()
 
 def test_run():
-    df=pd.read_csv("data/HCP.csv")
-    print(df['Adj Close'])
-    df['Adj Close'].plot()
+    df=pd.read_csv("data/SHARAK.csv")
+    # print(df['ClosePrice','LastPrice'])
+    df[['ClosePrice','PriceFirst']].plot()
     plt.show()
 	
     
