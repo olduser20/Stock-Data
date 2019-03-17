@@ -1,7 +1,7 @@
 
 
 import pandas as pd
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # def get_max_close(symbol):
     # df=pd.read_csv("data/{}.csv".format(symbol))
@@ -22,7 +22,8 @@ def test_run():
     
     
     # print(df['ClosePrice','LastPrice'])
-    # df[['ClosePrice','PriceFirst']].plot()
+    # df1[['ClosePrice','PriceFirst']].plot()
+    # df1.plot()
     # plt.show()
 	
     
