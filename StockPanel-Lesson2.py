@@ -54,9 +54,9 @@ def test_run():
     # plt.show()
 
     ### Part 14 ###
-    df=pd.read_csv("data/VBMELLAT.csv")
-    df[['ClosePrice','PriceMax','PriceMin']].plot()
-    plt.show()
+    # df=pd.read_csv("data/VBMELLAT.csv")
+    # df[['ClosePrice','PriceMax','PriceMin']].plot()
+    # plt.show()
     
 	
 	
