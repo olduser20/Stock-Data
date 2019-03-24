@@ -46,6 +46,21 @@ def get_data(symbols,dates):
     return df
 
 
+def plot_data(df,title="Stock prices"):
+    """ Plot stock prices """
+    ax=df.plot(title=title)
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price")
+    plt.show()
+
+def plot_selected(df, columns,start_index,end_index):
+    """ Plot the desired columns over index values in the given range. """
+    plot_data(df.loc[start_index:end_index,columns],title="Selected data")
+
+
+def normalize_data(df):
+    return df/df.ix[0,:]
+
 
 def test_run():
 
@@ -94,12 +109,12 @@ def test_run():
     # print(df)
 
     ### Part 14 ###
-    start_date='2018-03-16'
-    end_date='2019-03-16'
-    dates=pd.date_range(start_date,end_date)
+    # start_date='2018-03-16'
+    # end_date='2019-03-16'
+    # dates=pd.date_range(start_date,end_date)
 
-    symbols=['VBMELLAT','KHODRO','FAMLI']
-    df=get_data(symbols,dates)
+    # symbols=['VBMELLAT','KHODRO','FAMLI']
+    # df=get_data(symbols,dates)
     # Row slicing 
     # print(df.ix['2018-12-25':'2019-01-01'])
 
@@ -108,8 +123,23 @@ def test_run():
     # print(df[['VBMELLAT','KHODRO']])
 
     # Row and column slicing
-    print(df.loc['2018-12-25':'2019-01-01',['VBMELLAT','KHODRO']])
+    # print(df.loc['2018-12-25':'2019-01-01',['VBMELLAT','KHODRO']])
 
+
+
+    ### Part 17 ###
+    # start_date='2018-03-16'
+    # end_date='2019-03-16'
+    # dates=pd.date_range(start_date,end_date)
+
+    # symbols=['VBMELLAT','KHODRO','FAMLI']
+    # df=get_data(symbols,dates)
+
+    # plot_data(df)
+    
+    # plot_selected(df,['FAMLI'],'2018-11-01','2018-12-30')
+
+    # plot_data(normalize_data(df),title="Normalized prices")
 
 
 
