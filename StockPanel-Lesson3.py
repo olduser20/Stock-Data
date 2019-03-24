@@ -84,20 +84,35 @@ def test_run():
     
 
     ### Part 12 ###
+    # start_date='2018-03-16'
+    # end_date='2019-03-16'
+    # dates=pd.date_range(start_date,end_date)
+
+    # symbols=['VBMELLAT','KHODRO','FAMLI']
+
+    # df=get_data(symbols,dates)
+    # print(df)
+
+    ### Part 14 ###
     start_date='2018-03-16'
     end_date='2019-03-16'
     dates=pd.date_range(start_date,end_date)
 
     symbols=['VBMELLAT','KHODRO','FAMLI']
-
     df=get_data(symbols,dates)
-    print(df)
+    # Row slicing 
+    # print(df.ix['2018-12-25':'2019-01-01'])
 
-    ### Part 13 ###
-    
+    # Column slicing
+    # print(df[['FAMLI']])
+    # print(df[['VBMELLAT','KHODRO']])
 
-    ### Part 14 ###
-    
+    # Row and column slicing
+    print(df.loc['2018-12-25':'2019-01-01',['VBMELLAT','KHODRO']])
+
+
+
+
     
 	
 	
