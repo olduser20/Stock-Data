@@ -1,6 +1,10 @@
 
 
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 
 def test_run():
     df=pd.read_csv("data/IRX.csv")
