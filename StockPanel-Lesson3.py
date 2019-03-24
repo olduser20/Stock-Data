@@ -39,10 +39,10 @@ def get_data(symbols,dates):
         df_temp=df_temp.rename(columns={'ClosePrice':symbol})
         df=df.join(df_temp)
         if symbol=='SHARAK':
-            df.dropna(subset=["SHARAK"])
+            df=df.dropna(subset=["SHARAK"])
 
 
-    df.drop_duplicates()
+    df=df.drop_duplicates()
     return df
 
 
